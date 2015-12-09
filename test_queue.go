@@ -45,6 +45,10 @@ func (queue *TestQueue) AddBatchConsumer(tag string, batchSize int, consumer Bat
 	return ""
 }
 
+func (queue *TestQueue) ReturnAllUnacked() int {
+	return 0
+}
+
 func (queue *TestQueue) ReturnRejected(count int) int {
 	return 0
 }

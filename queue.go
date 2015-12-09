@@ -36,6 +36,7 @@ type Queue interface {
 	AddBatchConsumer(tag string, batchSize int, consumer BatchConsumer) string
 	PurgeReady() bool
 	PurgeRejected() bool
+	ReturnAllUnacked() int
 	ReturnRejected(count int) int
 	ReturnAllRejected() int
 	Close() bool
